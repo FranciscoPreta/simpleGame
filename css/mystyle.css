@@ -6,7 +6,10 @@
 }
 
 .game-board{
-    width: 80%;
+    background: url(../resources/wp.png) no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
     height: 500px;
     border: 1px solid #333;
     margin: 0 auto;
@@ -20,14 +23,13 @@
     width: 80px;
     height: 150px;
     background-color: #331a1a00;
-    animation: fridge-animation 3s infinite linear;
+    animation: fridge-animation 1.5s infinite linear;
 }
 
 .cadet{
     width: 100px;
     position: absolute;
     bottom: 0;
-    left: 100px;
 }
 
 .jump{

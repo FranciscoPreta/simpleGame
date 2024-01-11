@@ -19,12 +19,21 @@ function jump(event) {
   function abc(){
 
     var fridgePos = fridge.offsetLeft;
-    console.log(fridgePos)
+    var cadetPos = +window.getComputedStyle(cadet).bottom.replace('px', '');
 
-    if (fridgePos <= 120){
+    
+
+    if (fridgePos <= 10 && fridgePos > 0 && cadetPos < 145  ){
         
         fridge.style.animation = 'none';
         fridge.style.left = `${fridgePos}px`
+
+        cadet.style.animation = 'none';
+        cadet.style.bottom = `${fridgePos}px`
+
+        cadet.src = 'resources/dead.png'
+        
+        clearInterval(abc);
 
     }
 
