@@ -1,5 +1,4 @@
 var cadet = document.querySelector('.cadet');
-//left: 190px;
 var fridge = document.querySelector('.fridge');
 
 
@@ -31,9 +30,30 @@ function jump(event) {
         cadet.style.animation = 'none';
         cadet.style.bottom = `${fridgePos}px`
 
-        cadet.src = 'resources/dead.png'
+        cadet.src = 'resources/Cadet_Cabaco.png'
         
-        clearInterval(abc);
+        clearInterval(loop);
+
+        var gameoverDiv = document.createElement('div');
+        gameoverDiv.className = 'gameover';
+        gameoverDiv.textContent = 'Yum took the game home and ended the party.... again';
+
+        document.body.appendChild(gameoverDiv);
+
+        var yumGif = document.createElement('img');
+        yumGif.src = 'resources/yum.webp';
+        yumGif.alt = 'Image Description';
+
+        gameoverDiv.appendChild(yumGif);
+
+        var restartButton = document.createElement('button');
+        restartButton.textContent = 'Restart';
+        restartButton.addEventListener('click', function () {
+            
+            location.reload();
+        });
+
+        gameoverDiv.appendChild(restartButton);
 
     }
 
@@ -43,3 +63,12 @@ function jump(event) {
 
 
   document.addEventListener('keydown', jump);
+
+  restartButton.addEventListener('click', function () {
+    // Reset the game state and hide the gameover container
+    document.querySelector('.gameover-container').style.display = 'none';
+    restartButton.style.display = 'none'; // Hide the restart button
+    cadet.src = 'resources/alive.png'; // Reset the cadet image source
+    // Add any additional reset logic as needed
+    loop = setInterval(abc, 10); // Restart the game loop
+});

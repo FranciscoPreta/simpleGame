@@ -8,9 +8,8 @@
 .game-board{
     background: url(../resources/wp.png) no-repeat;
     background-size: cover;
-    height: 1000px;
     width: 100%;
-    height: 500px;
+    height: 700px;
     border: 1px solid #333;
     margin: 0 auto;
     position: relative;
@@ -44,6 +43,45 @@
     }
 }
 
+.gameover{
+    font-family: Cursive;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px; 
+    color: rgb(242, 247, 217);
+    background-color: #000000d2; 
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gameover img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 50%;
+    clip-path: ellipse(50% 40% at center);
+  }
+
+  button {
+    font-family: Cursive;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+    button:hover {
+    background-color: #45a049; 
+  }
 
 @keyframes jump {
 
