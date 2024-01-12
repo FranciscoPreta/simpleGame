@@ -18,7 +18,7 @@ function jump(event) {
   function abc(){
 
     var fridgePos = fridge.offsetLeft;
-    var cadetPos = +window.getComputedStyle(cadet).bottom.replace('px', '');
+    var cadetPos = window.getComputedStyle(cadet).bottom.replace('px', '');
 
     
 
