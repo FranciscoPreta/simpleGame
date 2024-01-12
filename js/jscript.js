@@ -65,10 +65,8 @@ function jump(event) {
   document.addEventListener('keydown', jump);
 
   restartButton.addEventListener('click', function () {
-    // Reset the game state and hide the gameover container
     document.querySelector('.gameover-container').style.display = 'none';
-    restartButton.style.display = 'none'; // Hide the restart button
-    cadet.src = 'resources/alive.png'; // Reset the cadet image source
-    // Add any additional reset logic as needed
-    loop = setInterval(abc, 10); // Restart the game loop
+    restartButton.style.display = 'none';
+    cadet.src = 'resources/alive.png'; 
+    loop = setInterval(abc, 10); 
 });
