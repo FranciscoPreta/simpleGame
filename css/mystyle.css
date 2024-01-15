@@ -43,6 +43,22 @@
     }
 }
 
+@keyframes cloud-animation {
+    from{
+    right: -80px;
+    }
+    to{
+    right: 100%;
+    }
+}
+
+.cliud{
+    position: absolute;
+    bottom: 0;
+    background-color: #331a1a00;
+    animation: cloud-animation 4s infinite linear;
+}
+
 .gameover{
     font-family: Cursive;
     font-size: 40px;
@@ -102,3 +118,4 @@
     }
 
 }
+
